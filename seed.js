@@ -1,6 +1,6 @@
 //Para correr el seed deberias tener en "/models/index" importados los dos modelos y despues exportarlos
 
-const { Producto, Categoria } = require("./models");
+const { Producto, Categoria } = require("./models/db");
 
 
 function addBooks({ nombre, precio, descripcion, disponible, genre1 }) {
@@ -14,6 +14,7 @@ function addBooks({ nombre, precio, descripcion, disponible, genre1 }) {
         Categoria.findOrCreate({ where: { nombre: genre1 } })
     ])
         .then(([newBook, genre1]) => {
+            console.log(newBook)
             newBook.setCategoria(genre1[0]);
         })
         .catch(console.log);

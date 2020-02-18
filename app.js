@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 const port = 3000;
 
-db.sync()
+db.sync({ force: true })
     .then(app.listen(port, () => {
         console.log(`Listening on port ${port}`)
     }))
