@@ -10,7 +10,7 @@ Modelo Producto {
 	disponible: booleano = default true
 }
 Tambien tiene que tener un getter truncarDescripcion que devuelva la descripción truncada a solo 20 caracteres y termine con '…'
-Agregar un hook antes de ser creado que se fije en la propiedad 'disponible' en caso de ser false, agregar en el titulo del producto un "NO DISPONIBLE", por ejemplo, si el producto "Cartuchera" no esta disponible quedaría: "Cartucheara NO DISPONIBLE"
+Agregar un hook antes de ser creado que se fije en la propiedad 'disponible' en caso de ser false, agregar en el titulo del producto un "NO DISPONIBLE", por ejemplo, si el producto "Cartuchera" no esta disponible quedaría: "Cartuchera NO DISPONIBLE"
 Los endpoints van a ser los siguientes:
 GET /productos
 GET /productos/:id

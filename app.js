@@ -11,6 +11,8 @@ const Routes = require('./routes')
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true })) //ESTO PERMITE QUE EXPRESS MANEJE datos del req.body
+
 app.use('/productos', routes)
 
 app.get('/', (req, res) => {
@@ -19,7 +21,7 @@ app.get('/', (req, res) => {
 
 const port = 3000;
 
-db.sync({ force: true })
+db.sync({ force: false })
     .then(app.listen(port, () => {
         console.log(`Listening on port ${port}`)
     }))
