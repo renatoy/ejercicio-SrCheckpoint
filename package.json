@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio-sr-checkpoint",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "postgresql": "0.0.1",
+    "sequelize": "^5.21.4"
+  },
+  "devDependencies": {},
+  "description": ""
+}
